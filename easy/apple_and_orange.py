@@ -1,4 +1,5 @@
 #!/bin/python3
+# hackerrank link: https://www.hackerrank.com/challenges/apple-and-orange/problem
 
 import math
 import os
@@ -25,18 +26,23 @@ def countApplesAndOranges(house, trees, apples, oranges):
     count_oranges = 0
 
     # Write your code here
-    for apple in apples:
-        apple += a
-        if apple >= s and apple <= t:
-            count_apples += 1
+    # for apple in apples:
+    #     apple += a
+    #     if apple >= s and apple <= t:
+    #         count_apples += 1
+    #
+    # for orange in oranges:
+    #     orange += b
+    #     if orange >= s and orange <= t:
+    #         count_oranges += 1
+    #
+    # print(count_apples)
+    # print(count_oranges)
+    #
+    print(sum([1 for apple in apples if (x + a) >= s and (x + a) <= t]))
+    print(sum(1 for orange in oranges if (x + b) >= s and (x + b) <= t ))
 
-    for orange in oranges:
-        orange += b
-        if orange >= s and orange <= t:
-            count_oranges += 1
 
-    print(count_apples)
-    print(count_oranges)
 
 
 
